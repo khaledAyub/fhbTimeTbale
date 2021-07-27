@@ -10,4 +10,10 @@
 
     <color name="darkblue">#2596be</color>
     <color name="hellblue">#8ecde0</color>
+
+    <color name="junegreen">#6ab04c</color>
+    <color name="spicedorange">#686de0</color>
+    <color name="spicedwhite">#dff9fb</color>
+
+
 </resources>
