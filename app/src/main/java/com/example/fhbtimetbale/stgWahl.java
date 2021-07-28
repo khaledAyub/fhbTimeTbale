@@ -40,29 +40,35 @@ public class stgWahl extends AppCompatActivity {
         item.add(new StativRvModel(R.drawable.gestaltung, "Gestaltung"));
         item.add(new StativRvModel(R.drawable.healthcare, "Pflege und Gesundheit"));
 
-        recyclerView =findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         staticRvAdapter = new StaticRvAdapter(item);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(staticRvAdapter);
 
+        //TODO: if item1 is selected nodule anzeigen usw...
 
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
-        items.add(new DynamicRVModel("Ingenieurinformatik"));
 
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+        items.add(new DynamicRVModel("INI", R.drawable.inibild));
+
+
+
+
+        RecyclerView drv = findViewById(R.id.recyclerView2);
+        drv.setLayoutManager(new LinearLayoutManager(this));
+        dynamicRVAdapter = new DynamicRVAdapter(drv, this,items);
+        drv.setAdapter(dynamicRVAdapter);
+
+/*
         RecyclerView drv = findViewById(R.id.recyclerView2);
         drv.setLayoutManager(new LinearLayoutManager(this));
         dynamicRVAdapter = new DynamicRVAdapter(drv, this,items);
@@ -82,11 +88,12 @@ public class stgWahl extends AppCompatActivity {
 
                             int index = items.size();
                             int end = index+10;
-                            for (int i=index; i<end; i++){
-                                String name = UUID.randomUUID().toString();
-                                DynamicRVModel item = new DynamicRVModel(name);
-                                items.add(item);
-                            }
+                          //  for (int i=index; i<end; i++){
+                              //  String name = UUID.randomUUID().toString();
+                               // int image = findViewById(R.drawable.inibild);
+                                //DynamicRVModel item = new DynamicRVModel(name, image);
+                              //  items.add(item);
+                          //  }
                             dynamicRVAdapter.notifyDataSetChanged();
                             dynamicRVAdapter.setLoaded();
                         }
@@ -96,6 +103,8 @@ public class stgWahl extends AppCompatActivity {
                     Toast.makeText(stgWahl.this, "Data Completed", Toast.LENGTH_SHORT).show();
             }
         });
+
+        */
 
     }
 }

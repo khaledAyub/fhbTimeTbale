@@ -24,6 +24,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:fontFamily="@font/exobold"
         android:layout_gravity="center"
         android:text="Ingenieurwissenschaften und Mathematik - Allgemein Bielefeld"/>
